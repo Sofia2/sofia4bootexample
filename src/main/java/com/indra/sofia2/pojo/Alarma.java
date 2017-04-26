@@ -6,17 +6,36 @@
  ******************************************************************************/
 package com.indra.sofia2.pojo;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-public class Alarma
+public class AlarmaBody
 {
+  private String mensajeAlarma;
 
-  @JsonProperty("Alarma")
-  private AlarmaBody alarma;
+  public String getMensajeAlarma() { return this.mensajeAlarma; }
 
-  public AlarmaBody getAlarma() { return this.alarma; }
+  public void setMensajeAlarma(String mensajeAlarma) { this.mensajeAlarma = mensajeAlarma; }
 
-  public void setAlarma(AlarmaBody alarma) { this.alarma = alarma; }
+  private String causa;
+
+  public String getCausa() { return this.causa; }
+
+  public void setCausa(String causa) { this.causa = causa; }
+
+  private String mensajeExcepcion;
+
+  public String getMensajeExcepcion() { return this.mensajeExcepcion; }
+
+  public void setMensajeExcepcion(String mensajeExcepcion) { this.mensajeExcepcion = mensajeExcepcion; }
+
+  private String procedenciaAlarma;
+
+  public String getProcedenciaAlarma() { return this.procedenciaAlarma; }
+
+  public void setProcedenciaAlarma(String procedenciaAlarma) { this.procedenciaAlarma = procedenciaAlarma; }
+
+  private int timestamp;
+
+  public int getTimestamp() { return this.timestamp; }
+
+  public void setTimestamp(int timestamp) { this.timestamp = timestamp; }
   
 }
-
