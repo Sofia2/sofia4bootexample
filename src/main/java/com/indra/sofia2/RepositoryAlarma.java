@@ -14,7 +14,6 @@ import com.indra.sofia2.aspect.Sofia2Query;
 import com.indra.sofia2.aspect.Sofia2Repository;
 import com.indra.sofia2.aspect.Sofia2Update;
 import com.indra.sofia2.beans.SofiaId;
-import com.indra.sofia2.pojo.Alarma;
 import com.indra.sofia2.pojo.AlarmaOntologia;
 
 @Sofia2Repository("Alarma")
@@ -30,7 +29,7 @@ public interface RepositoryAlarma {
 	List<SofiaId> update(@Param("$valor")String valor,@Param("$param") String param);
 	
 	@Sofia2Insert()
-	SofiaId insert(Alarma alarma);
+	SofiaId insert(AlarmaOntologia alarma);
 	
 	@Sofia2Delete("delete from Alarma where Alarma.causa=$parametro")
 	List<SofiaId> delete(@Param("$parametro")String valor);

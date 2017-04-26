@@ -7,18 +7,18 @@
 package com.indra.sofia2.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.indra.sofia2.beans.SofiaId;
+import com.indra.sofia2.beans.Ontology;
 
 
-public class AlarmaOntologia extends SofiaId
+public class AlarmaOntologia extends Ontology<Alarma>
 {
 
   @JsonProperty("Alarma")
-  private AlarmaBody alarma;
+  private Alarma alarma;
 
-  public AlarmaBody getAlarma() { return this.alarma; }
+  public Alarma getData() { return this.alarma; }
 
-  public void setAlarma(AlarmaBody alarma) { this.alarma = alarma; }
+  public void setData(Alarma alarma) { this.alarma = alarma; }
   
 }
 

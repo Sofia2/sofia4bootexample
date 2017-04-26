@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.indra.sofia2.beans.SofiaId;
-import com.indra.sofia2.pojo.Alarma;
 import com.indra.sofia2.pojo.AlarmaOntologia;
 
 @RestController
@@ -37,7 +36,7 @@ public class Controller {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-    public String insert(@RequestBody Alarma alarma) throws JsonProcessingException {
+    public String insert(@RequestBody AlarmaOntologia alarma) throws JsonProcessingException {
     	SofiaId id = repository.insert(alarma);
     	ObjectMapper objectMapper = new ObjectMapper();
 		String arrayToJson = objectMapper.writeValueAsString(id);

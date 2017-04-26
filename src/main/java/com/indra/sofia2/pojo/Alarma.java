@@ -6,7 +6,7 @@
  ******************************************************************************/
 package com.indra.sofia2.pojo;
 
-public class AlarmaBody
+public class Alarma
 {
   private String mensajeAlarma;
 
